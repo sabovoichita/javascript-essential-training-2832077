@@ -6,6 +6,17 @@
  - open the methods...
  Console Methods:
  console.log("the backpack object: ",backpack);
+*Accesing Object Properties*
+- with dot notation
+- with bracket notation
+console.log("The pocketNum value:", backpack.pocketNum);
+console.log("Strap length L:", backpack.strapLength.left);
+- for bracket notion:
+console.log("The pocketNum value:", backpack["pocketNum"]);
+- set up vat
+var query = "pocketNum";
+console.log("The pocketNum value:", backpack[query]);
+
 
  */
 
@@ -29,3 +40,8 @@ const backpack = {
 };
 
 console.log("The backpack object:", backpack);
+console.log("The pocketNum value:", backpack.pocketNum);
+console.log("Strap length L:", backpack.strapLength.left);
+console.log("The pocketNum value:", backpack["pocketNum"]);
+var query = "pocketNum";
+console.log("The pocketNum value with var:", backpack[query]);
