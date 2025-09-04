@@ -1,5 +1,21 @@
 /**
  * Create a Backpack object.
+ * Object Properties
+ - are defined using a colom separated name-value pairs
+ ex: name: "Everyday Backpack",
+ - name can be any string and is placed on the left 
+ and the value can be: 
+ -a string inside quotation marks
+ ex: "Everyday Backpack"
+ - an integer or a floating point number
+ ex: 30
+ - a Boolean
+ ex: false/true
+ - an array
+ - on object placed on the right
+
+-camelCase propery names to avoid issues
+
  */
 
 const backpack = {
