@@ -1,5 +1,20 @@
 /**
  * Create a Backpack object.
+ * *Object Containers* *
+ -the container is a constant variable
+ -Variable declaration:
+  -var
+  -let
+  -const
+-Variable name: refer to the name; ge the data contained within
+Objects are Typically Constants
+-We can change the properties of the object inside the container;
+-We can't remove or replace the object from the container.
+-
+ex:
+backpack.volume = 50
+backpack
+
  */
 
 const backpack = {
