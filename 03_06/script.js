@@ -1,5 +1,12 @@
 /**
  * Create a Backpack object.
+ * Accesing Object *
+ - to access an object you call it by its name
+ - call the object in the console by writing backpack
+ - open the methods...
+ Console Methods:
+ console.log("the backpack object: ",backpack);
+
  */
 
 const backpack = {
