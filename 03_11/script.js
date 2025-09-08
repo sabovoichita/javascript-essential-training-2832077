@@ -1,6 +1,17 @@
 /**
  * Create an object constructor function for the Backpack object type.
  * @link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new
+ * just like with the class
+ * The object constructor function captures the properties of the new object using
+ its parameters and then defines and assign values for each property and method
+ using the "this" keyword and dot notation.
+ The difference is that the methods live inside the object constructor function
+ just like the proeprties do.
+ *To create a new object we do the same as in the class
+ const everydayBackpack = new Backpack(...)
+ -The class allows us to do more things:
+ we extend the classes,
+ we can add new features to them that are not available inside the object constructor function
  */
 
 function Backpack(
