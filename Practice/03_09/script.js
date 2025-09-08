@@ -5,6 +5,9 @@
  * - The method receives a value to match the property to be changed.
  * - Create a simple function to replace the current property value with the received value.
  * - Test the method by sending new values and checking the properties in the console.
+ * 1. Pass value to a function inside the parenthesis
+ * 2. Refer to the current object as "this"
+ * 3. Assign any value to any property
  */
 
 const backpack = {
@@ -23,4 +26,11 @@ const backpack = {
     this.strapLength.left = lengthLeft;
     this.strapLength.right = lengthRight;
   },
+  newName: function (newName) {
+    this.name = newName;
+  },
+  newVolume: function (newVolume) {
+    this.volume = newVolume;
+  },
 };
+console.log(backpack);
