@@ -51,3 +51,38 @@ const content = `
 `;
 
 main.innerHTML = content;
+// //add a class or remove a class
+// // Element.className
+
+// console.log(document.querySelector("h1").className);
+// console.log((document.querySelector("h1").className = "new-class"));
+
+// //Elememt.classList
+
+// console.log(document.querySelector("main li:first-child").classList);
+// //add
+// console.log(
+//   document.querySelector("main li:first-child").classList.add("new-class")
+// );
+// console.log(document.querySelector("main li:first-child").className);
+// //remove
+// console.log(
+//   document.querySelector("main li:first-child").classList.remove("new-class")
+// );
+// console.log(document.querySelector("main li:first-child").className);
+
+// //toggle- to add a class if its not there or remove it if it's there
+// console.log(
+//   document.querySelector("main li:first-child").classList.toggle("new-class")
+// );
+// console.log(document.querySelector("main li:first-child").className);
+
+// console.log(
+//   document.querySelector("main li:first-child").classList.toggle("new-class")
+// );
+// //replace
+// console.log(
+//   document
+//     .querySelector("main li:first-child")
+//     .classList.replace("packprop", "new-class")
+// );
