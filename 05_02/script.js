@@ -49,3 +49,58 @@ const content = `
 `;
 
 main.innerHTML = content;
+
+document.querySelector("main");
+// {
+//   /* <main class=​"maincontent">​…​</main>​ */
+// }
+document.querySelector(".maincontent");
+// {
+//   /* <main class=​"maincontent">​…​</main>​ */
+// }
+document.querySelector("main li:last-child");
+// {
+//   /* <li class=​"backpack__lid">​…​</li>​ */
+// }
+document.querySelectorAll("main li");
+// NodeList(7) [li.backpack__volume, li.backpack__color, li.backpack__age, li.backpack__pockets, li.backpack__strap, li.backpack__strap, li.backpack__lid]
+document
+  .querySelectorAll("main li")
+  .forEach((item) => (item.style.backgroundColor = "red"));
+// undefined
+document
+  .querySelectorAll("main li:last-child")
+  .forEach((item) => (item.style.backgroundColor = "blue"));
+// undefined
+document
+  .querySelectorAll("span")
+  .forEach((item) => (item.style.backgroundColor = "blue"));
+// undefined
+document
+  .querySelectorAll("span")
+  .forEach((item) => (item.style.backgroundColor = "green"));
+// undefined
+document.querySelector(".backpack__color").style.color = "purple";
+// 'purple'
+document.querySelector(".backpack__age").style.color = "purple";
+// 'purple'
+document.querySelector(".backpack__age").style.background = "violet";
+// 'violet'
+document.querySelector(".backpack__pockets").style.color = "orange";
+// 'orange'
+document.querySelector(".backpack__strap").style.color = "darkblue";
+// 'darkblue'
+document.querySelector(".backpack__lid").style.color = "darkgreen";
+// 'darkgreen'
+document.querySelector(".backpack__lid").style.background = "white";
+// 'white'
+document.querySelector(".backpack__image").style.color = "white";
+// 'white'
+document.querySelector(".backpack__image").style.background = "black";
+// 'black'
+document.querySelector(".backpack__name").style.background = "Violet";
+// 'Violet'
+document.querySelector(".backpack__features").style.background = "lightgrey";
+// 'lightgrey'
+document.querySelector(".backpack__volume").style.color = "lightblue";
+// 'lightblue'
