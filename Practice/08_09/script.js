@@ -11,6 +11,11 @@
  *  - Adds <img> markup pointing to frogpack.image
  *  - Adds <figcaption> element with image description
  *  - Returns <figure> element to where function is called
+ * Use querySelector and the append method
+ * Pass the object to the main function
+ * Pass it to the figure function
+ * Return everything from the main function
+ * function imageMarkup(imageURL, imageDescription)
  */
 
 const frogpack = {
@@ -24,6 +29,8 @@ const frogpack = {
   },
   lidOpen: false,
   image: "../../assets/images/frog.svg",
+  description: "A green kids backpack ",
+
   toggleLid: function (lidStatus) {
     this.lidOpen = lidStatus;
   },
@@ -57,3 +64,30 @@ const content = `
       }</span></li>
     </ul>  
 `;
+
+// helperImage Function
+const helperImage = (obj) => {
+  // console.log("Making a image here");
+  let newFigure = document.createElement("figure");
+  let image = document.createElement("img");
+  image.src = obj.image;
+  // console.log("Making a image here", image);
+  image.alt = obj.description;
+  image.width = 250;
+  image.height = 250;
+  let figCaption = document.createElement("figcaption");
+  figCaption.innerText = obj.description;
+  newFigure.append(image, figCaption);
+  return newFigure;
+};
+
+//CreateArticle function
+const createArticle = (frogpack) => {
+  // console.log("Creating an article here");
+  const newArticle = document.createElement("article");
+  newArticle.innerHTML = content;
+  newArticle.prepend(helperImage(frogpack));
+  // console.log(article);
+  return newArticle;
+};
+document.querySelector("main").appendChild(createArticle(frogpack));
