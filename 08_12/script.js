@@ -55,8 +55,32 @@ newArticle.innerHTML = content;
 
 main.append(newArticle);
 
+//30 days <= or !== (not equal)
 if (everydayPack.backpackAge() >= 30) {
-  console.log("Backpack is used")
+  console.log("Backpack is used");
 } else {
-  console.log("Backpack is new")
+  console.log("Backpack is new");
+}
+
+//Backpack is big
+if (everydayPack.volume > 15 && everydayPack.pocketNum >= 5) {
+  console.log("Backpack is big");
+} else {
+  console.log("Backpack is small");
+}
+
+//Backpack is small
+if (everydayPack.volume > 35 && everydayPack.pocketNum >= 5) {
+  console.log("Backpack is big");
+} else {
+  console.log("Backpack is small");
+}
+//When using && both conditions need to be met for it to return true
+
+//OR Statement- if either the first statement, or the second statement
+//or both are true, we return true, otherwise will return false
+if (everydayPack.volume > 35 || everydayPack.pocketNum >= 5) {
+  console.log("Backpack is big");
+} else {
+  console.log("Backpack is small");
 }
