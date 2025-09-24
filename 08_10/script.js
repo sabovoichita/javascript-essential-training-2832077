@@ -38,7 +38,7 @@ const printHTML = (finalTip) => {
 };
 
 // Create a finalTip object with all the data. Send it to the printHTML callback.
-const tipCalculator = (sum, percentage, locale, currency) => {
+const tipCalculator = (sum, percentage, locale, currency, callback) => {
   let tip = sum * (percentage / 100);
   let total = sum + tip;
 
@@ -48,6 +48,18 @@ const tipCalculator = (sum, percentage, locale, currency) => {
     tip: formatter(locale, currency, tip),
     total: formatter(locale, currency, total),
   };
+
+  callback(finalTip);
 };
 
-tipCalculator(29.95, 18, "de-DE", "EUR");
+// tipCalculator(29.95, 18, "de-DE", "EUR", printHTML);
+// Sum before tip:	29,95 €
+// Tip percentage:	18%
+// Tip:	5,39 €
+// Total:	35,34 €
+
+tipCalculator(29.95, 18, "nb-NO", "NOR", printHTML);
+// Sum before tip:	29,95 NOR
+// Tip percentage:	18%
+// Tip:	5,39 NOR
+// Total:	35,34 NOR
