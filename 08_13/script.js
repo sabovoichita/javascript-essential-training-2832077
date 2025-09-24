@@ -54,21 +54,24 @@ newArticle.innerHTML = content;
 
 main.append(newArticle);
 
-const usedStatus = () => {
+/*const usedStatus = () => {
   let age = everydayPack.backpackAge();
   let description;
   if (age >= 30) {
+    //if the age is over 30 days
     if (age >= 365) {
+      // and if the age is over 365 days
       if (age >= 1095) {
-        description = "old";
+        //and if the age is over 1095 days
+        description = "old"; // then description = "old"
       } else {
-        description = "used";
+        description = "used"; // otherwise is "used"
       }
     } else {
-      description = "lightly used";
+      description = "lightly used"; // otherwise is "lightly used"
     }
   } else {
-    description = "new";
+    description = "new"; // otherwise is "new"
   }
 
   console.log(`
@@ -76,5 +79,53 @@ const usedStatus = () => {
   Status: ${description}
   `);
 };
+*/
 
-usedStatus()
+//When we want to get different results, depending on various conditions,
+// we can use a SWITCH statement
+//The switch statements evaluates an expression, matching the expression's
+// value to a case clause, and executes statements associated with that case,
+// as well as statements in case's that follow the matching case
+/*
+const expr = "Papayas";
+switch (expr){
+case "Oranges":
+  console.log("Oranges are $0.59 a pound.")
+break;
+case "Mangoes";
+case "Papayas":
+  console.log("Mangoes and Papayas are $2.79 a pound.");
+  //expected output: "Mangoes and Papayas are $2.79 a pound."
+break;
+default: 
+  console.log(`Sorry, we are out of ${expr}.`);
+//default are if none of the conditions are met
+*/
+
+const usedStatus = () => {
+  let age = everydayPack.backpackAge();
+  age = 20; //age = 35// age = 365 // age = 1096
+  let description;
+  switch (true) {
+    case age < 30:
+      description = "new";
+      break;
+    case age >= 30 && age < 365:
+      description = "lightly used";
+      break;
+    case age >= 365 && age < 1095:
+      description = "used";
+      break;
+    case age >= 1095:
+      description = "old";
+      break;
+    default:
+      console.log(`There is no description for ${age}`);
+  }
+  console.log(`
+  Age: ${age} days
+  Status: ${description}
+  `);
+};
+
+usedStatus();
