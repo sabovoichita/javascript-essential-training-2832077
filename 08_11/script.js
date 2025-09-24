@@ -13,7 +13,7 @@ const everydayPack = new Backpack(
   15,
   26,
   26,
-  false,
+  false, // true // undefined // null
   "December 5, 2018 15:00:00 PST",
   "../assets/images/everyday.svg"
 );
@@ -41,7 +41,7 @@ const content = `
       everydayPack.strapLength.right
     } inches</span></li>
     <li class="feature backpack__lid">Lid status:<span> ${
-      everydayPack.lidOpen
+      everydayPack.lidOpen ? "open" : "closed"
     }</span></li>
   </ul>
 `;
@@ -54,3 +54,29 @@ newArticle.setAttribute("id", "everyday");
 newArticle.innerHTML = content;
 
 main.append(newArticle);
+
+// option 1
+// if (everydayPack.lidOpen === true) {
+//   console.log("Lid is open!😀");
+// } else {
+//   console.log("Lid is closed! 😐");
+// }
+
+//option 2
+// if (everydayPack.lidOpen) {
+//   console.log("Lid is open!😀");
+// } else {
+//   console.log("Lid is closed! 😐");
+// }
+
+//option 3
+if (everydayPack.lidOpen === "true") {
+  //only if it's exactly a string "true" if "True" will say false
+  console.log("Lid is open!😀");
+} else {
+  console.log("Lid is closed! 😐");
+}
+
+//Ternary OPerator:
+console.log(everydayPack.lidOpen ? "open" : "closed");
+//will add it to the template literal above
